@@ -1,0 +1,14 @@
+{
+    "name": "orcha-server",
+    "version": "0.0.1",
+    "main": "server.js",
+    "license": "MIT",
+    "scripts": {
+        "prestart": "yarn install",
+        "dev": "nodemon server.js",
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "mongoose": "5.10.7"
+    }
+}
