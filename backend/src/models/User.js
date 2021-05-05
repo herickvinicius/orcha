@@ -1,7 +1,7 @@
 //Iniciar aqui a instancia do banco de dados escolhido (noRel)
-const database  // = require("database")  example
+const mongoose = require('../config/database')
 
-const UserSchema = new database.Schema({
+const UserSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -25,3 +25,13 @@ const UserSchema = new database.Schema({
         select: false,
     },
 })
+
+UserSchema.pre("save", async (next) => {
+    const hash = await bcrypt.hash(this.password, 10)
+    this.password = hash
+    next()
+})
+
+const User = mongoose.model("User", UserSchema)
+
+module.exports = User

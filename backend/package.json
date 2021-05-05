@@ -1,14 +1,22 @@
 {
-    "name": "orcha-server",
-    "version": "0.0.1",
-    "main": "server.js",
-    "license": "MIT",
-    "scripts": {
-        "prestart": "yarn install",
-        "dev": "nodemon server.js",
-        "start": "node server.js"
-    },
-    "dependencies": {
-        "mongoose": "5.10.7"
-    }
+  "name": "orcha-backend",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prestart": "yarn install",
+    "dev": "nodemon",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.7",
+    "nodemon": "^2.0.7"
+  },
+  "author": "",
+  "description": ""
 }
